@@ -17,7 +17,7 @@ wait = WebDriverWait(driver, 30)
 driver.get(url)
 driver.maximize_window()
 
-select = Select(driver.find_element('name','drpArchival'))
+select = Select(driver.find_element('name', 'drpArchival'))
 options = select.options
 dates = []
 for opt in options:
@@ -27,6 +27,5 @@ for d in dates:
     select = Select(driver.find_element('name', 'drpArchival'))
     select.select_by_visible_text(d)
     driver.find_element('name', "btnFPISWH").click()
-
 
 driver.close()
