@@ -2,10 +2,11 @@ import pandas as pd
 import os
 
 filename = os.listdir("downloaded")[0]
-f = os.path.abspath("downloaded\\" + filename)
+f = os.path.abspath("downloaded/" + filename)
 
 print(f)
 read_file = pd.read_excel(f, engine='openpyxl')
+
 
 # for filename in os.listdir("downloaded"):
 #     f = os.path.join("downloaded", filename)
